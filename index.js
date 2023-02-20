@@ -25,7 +25,7 @@ app.use("/api/v1/dashboard", authentication, routerDashboard);
 
 app.use(middlewareErrHandler);
 app.use(middlewareNotFound);
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const start = async () => {
   try {
