@@ -15,6 +15,7 @@ const middlewareErrHandler = require("./middleware/middlewareErrHandler");
 // connect to database
 const connectDB = require("./db/connect");
 
+app.set("trust proxy", 1);
 app.use(cors());
 
 app.use(express.json());
